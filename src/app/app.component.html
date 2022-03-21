@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <button (click)="get_value()">REFRESH</button>
+    <br>
+    <br>
+    <input type="text" placeholder="TASK" #task>
+    <button type="submit" (click)="add_value(task.value)">Add </button>
+    <br>
+    <br>
+    <ul>
+      <li *ngFor="let item of items">
+        {{item.task}} 
+        <button (click)="delete_value(item)">REMOVE</button>
+      </li>
+    </ul>
+  </body>
+</html>
